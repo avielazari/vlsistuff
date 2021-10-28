@@ -17,7 +17,10 @@ dbase.HEI = HEI
 import renders
 import pickle
 
-import helpString 
+sys.path.append('../')
+from qdl_py import gen_QDL
+
+import helpString
 from dumpFormats import connectivityClass
 import drawVectorText
 import pictify
@@ -584,8 +587,9 @@ def __use_command_wrds(wrds):
         pickle.dump(Schem,Fout)
         Fout.close()
 
-
-
+    elif wrds[0] == 'qmod':
+        Dir = '/Users/avie/Documents/GitHub/Cadmium/qdl_DB/'
+        gen_QDL.gen_qdl(Root, Dir)
 
     elif wrds[0]=='save':
         if len(wrds)>1:
