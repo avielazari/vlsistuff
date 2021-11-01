@@ -18,7 +18,7 @@ import renders
 import pickle
 
 sys.path.append('../')
-from qdl_py import gen_QDL
+from qdl_py import gen_qdl
 
 import helpString
 from dumpFormats import connectivityClass
@@ -589,7 +589,7 @@ def __use_command_wrds(wrds):
 
     elif wrds[0] == 'qmod':
         Dir = '/Users/avie/Documents/GitHub/Cadmium/qdl_DB/'
-        gen_QDL.gen_qdl(Root, Dir)
+        gen_qdl.gen_qdl(Root, Dir)
 
     elif wrds[0]=='save':
         if len(wrds)>1:
